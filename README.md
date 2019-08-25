@@ -14,6 +14,7 @@ Objetivos:
 [x] Transformar a pagina who-next em App
 [x] Puxar do BackEnd (Laravel)
 [~] Abrir o mapa com a localização atual
+[x] Trocar os Icones de cor
 [x] Exibir quem está proximo por Kms
 
 [x] Puxar a localização atual no Android (Treta do HTTPS)
