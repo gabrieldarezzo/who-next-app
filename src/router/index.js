@@ -4,22 +4,6 @@ import routes from './routes'
 Vue.use(VueRouter)
 
 /*
-import 'vue-googlemaps/dist/vue-googlemaps.css'
-import VueGoogleMaps from 'vue-googlemaps'
-
-Vue.use(VueGoogleMaps, {
-  load: {
-    // Google API key
-    apiKey: 'AIzaSyC-9XzfWIRagerL60bVUzOpPlpZgmL-4n0',
-    // Enable more Google Maps libraries here
-    libraries: ['places'],
-    // Use new renderer
-    useBetaRenderer: false
-  }
-})
-*/
-
-/*
  * If not building with SSR mode, you can
  * directly export the Router instantiation
  */

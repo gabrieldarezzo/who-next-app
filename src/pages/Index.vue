@@ -45,7 +45,7 @@ export default {
   methods: {
     loadUsers () {
       const dataCusto = Object.assign(this.actualPositionLatLng, {
-        'km_distance': 23
+        'km_distance': 150
       })
 
       axios
@@ -66,6 +66,31 @@ export default {
         })
     },
     initializeMap () {
+      // console.log(position)
+
+      // Pegar a posição Atual dinamicamente
+      this.actualPosition = new this.google.maps.LatLng(-23.9772151, -46.3082780)
+      this.actualPositionLatLng = {
+        lat: -23.9772151,
+        lng: -46.3082780
+      }
+      const mapContainer = document.getElementById('mapView')
+      // const latlng = new this.google.maps.LatLng(this.position.lat, this.position.lng)
+      console.log(this.pinBlue)
+      this.map = new this.google.maps.Map(mapContainer, {
+        center: this.actualPosition,
+        zoom: 15,
+        mapTypeId: this.google.maps.MapTypeId.ROADMAP
+      })
+
+      this.actualMark = new this.google.maps.Marker({
+        position: this.actualPosition,
+        map: this.map
+      })
+      this.loadUsers()
+
+      /*
+      // após resolver a treta do HTTPS
       navigator.geolocation.getCurrentPosition((position) => {
         // console.log(position)
         this.actualPosition = new this.google.maps.LatLng(position.coords.latitude, position.coords.longitude)
@@ -73,9 +98,6 @@ export default {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         }
-
-        console.log(this.actualPosition)
-
         const mapContainer = document.getElementById('mapView')
         // const latlng = new this.google.maps.LatLng(this.position.lat, this.position.lng)
         console.log(this.pinBlue)
@@ -91,6 +113,7 @@ export default {
         })
         this.loadUsers()
       })
+      */
     }
   },
   async mounted () {

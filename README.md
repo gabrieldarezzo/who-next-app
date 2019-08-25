@@ -11,10 +11,15 @@ Ionic,Quasar == Abstração do Cordova
 Cordova = WebView do Android
 
 Objetivos:
-[ ] Transformar a pagina who-next em App
-[ ] Puxar do BackEnd (Laravel)
-[ ] Abrir o mapa com a localização atual
-[ ] Exibir quem está proximo
+[x] Transformar a pagina who-next em App
+[x] Puxar do BackEnd (Laravel)
+[~] Abrir o mapa com a localização atual
+[x] Exibir quem está proximo por Kms
+
+[x] Puxar a localização atual no Android (Treta do HTTPS)
+Sugestão:
+https://github.com/mapsplugin/cordova-plugin-googlemaps
+
 
 Android
 ```
